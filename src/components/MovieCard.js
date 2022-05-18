@@ -1,13 +1,12 @@
 import React, {useState} from "react";
-import {View,Text,StyleSheet,Image,TouchableOpacity, TouchableNativeFeedbackBase} from "react-native"
-import { TouchableOpacity } from "react-native-gesture-handler";
+import {View,Text,StyleSheet,Image,TouchableOpacity, TouchableNativeFeedback} from "react-native"
 import COLORS from "../constants/colors"
 import {Ionicons} from "@expo/vector-icons"
 import fonts from "../constants/fonts";
 import IMAGES from "../constants/Images"
 
 const MovieCard = () =>{
-        const[liked,setLiked] =useState(false)
+        const[liked,setLiked] = useState(false)
     return(
     <TouchableOpacity>
     <View style={styles.container}>
@@ -15,12 +14,13 @@ const MovieCard = () =>{
             <Image source={IMAGES.IMDB} style={styles.imdbImage}></Image>
             <Text style={styles.imdbRating}>9.4</Text>
         </View>
-        <TouchableNativeFeedback onPress={()=> setLiked(!liked)}>
+        <TouchableNativeFeedback onPress={()=> setLiked(!liked)} style={styles.heartbottom}>
         <Ionicons 
-            ame={liked ? "heart":"heart-outline"} 
+            name={liked ? "heart":"heart-outline"} 
             size={25} 
             color={liked ? COLORS.HEART : COLORS.WHITE} 
-            style={{position: "absolute", bottom:10,left: 10}}
+            // style={[position"absolute", bottom:10,left: 10]}
+            style={styles.heartbottom}
             />
         </TouchableNativeFeedback>
     </View>
@@ -30,7 +30,7 @@ const MovieCard = () =>{
             <Text style={styles.movieSubTitle}>English | (U/A)</Text>
             <View style={styles.rowAndCenter}>
             <Ionicons 
-            ame="heart" 
+            name="heart" 
             size={17} 
             color={COLORS.HEART} 
             style={{marginRight:5}}
@@ -91,6 +91,11 @@ const styles = StyleSheet.create({
         color: COLORS.HEART,
         fontFamily: fonts.Koulen,
 
+    },
+    heartbottom:{
+        position:"absolute",
+        bottom:10,
+        left:10
     }
 });
 
