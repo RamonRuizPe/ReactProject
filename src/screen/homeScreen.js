@@ -5,6 +5,7 @@ import colors from '../constants/colors';
 import GenreCard from '../components/GenreCard';
 import ItemSeparator from '../components/ItemSeparator';
 import fonts from '../constants/fonts';
+import MovieCard from '../components/MovieCard';
 
 const Genres = ["Todo", "Acción", "Comedia", "Romance", "Horror", "Sci-Fi"];
 
@@ -33,6 +34,18 @@ const homeScreen = () => {
             active={item === currentGenre ? true : false}
             onPress={setcurrentGenre}
             />)}></FlatList>
+    </View>
+    <View>
+      <FlatList
+        data={Genres}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={(item)=>item}
+        ItemSeparatorComponent={() => <ItemSeparator width={20}/>}
+        ListHeaderComponent={() => <ItemSeparator width={20}/>}
+        ListFooterComponent={() => <ItemSeparator width={20}/>}
+        renderItem={({item}) => <MovieCard/>}
+        />
     </View>
     </ScrollView>
   );
