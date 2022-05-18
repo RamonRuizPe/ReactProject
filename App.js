@@ -1,20 +1,31 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer, StackActions } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import homeScreen from './src/screen/HomeScreen';
+import movieScreen from './src/screen/movieScreen';
+import { useFonts } from 'expo-font';
+import AppLoading from 'expo-app-loading';
+
+const Stack = createStackNavigator()
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const [fontLoaded] = useFonts({
+    Koulen: require("./assets/fonts/Koulen-Regular.ttf"),
+  })
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  return fontLoaded ? (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen 
+        name='home' 
+        component={homeScreen} 
+        options={{headerShown: false}}/>
+        <Stack.Screen 
+        name='movie' 
+        component={movieScreen} 
+        options={{headerShown: false}}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  ) : (<AppLoading />);
+}
