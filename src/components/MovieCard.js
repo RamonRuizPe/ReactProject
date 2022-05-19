@@ -15,13 +15,13 @@ const MovieCard = () =>{
             <Image source={IMAGES.IMDB} style={styles.imdbImage}></Image>
             <Text style={styles.imdbRating}>9.4</Text>
         </View>
-        <TouchableNativeFeedback onPress={()=> setLiked(!liked)} style={styles.heartbottom}>
+        <TouchableNativeFeedback onPress={()=> setLiked(!liked)}>
         <Ionicons 
             name={liked ? "heart":"heart-outline"} 
             size={25} 
             color={liked ? colors.HEART : colors.HEART} 
-            // style={[position"absolute", bottom:10,left: 10]}
-            style={styles.heartbottom}
+            style={{position:"absolute", bottom:10,left: 10}}
+            // style={styles.heartbottom}
             />
         </TouchableNativeFeedback>
     </View>
