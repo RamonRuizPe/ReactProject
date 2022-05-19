@@ -1,7 +1,8 @@
 const axios =require("axios").default;
 import {
     TMDB_BASE_URL, 
-    TMDB_API_KEY, 
+    TMDB_API_KEY,
+    TMDB_LANGUAGE_ES, 
     TMBD_IMAGE_BASE_URL,
     YOUTUBE_BASE_URL,
     ENDPOINTS} from "../constants/Urls";
@@ -11,6 +12,7 @@ import Languajes from "../constants/Languajes";
         baseURL: TMDB_BASE_URL,
         params:{
             api_key: TMDB_API_KEY,
+            language: TMDB_LANGUAGE_ES,
         },
     });
 

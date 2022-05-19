@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     genreText: {
         fontSize: 18,
         color: colors.ACTIVE,
-        fontFamily: fonts.Koulen,
+        fontFamily: fonts.Akshar_Medium,
     }
   });
 

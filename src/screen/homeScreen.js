@@ -8,13 +8,11 @@ import fonts from '../constants/fonts';
 import MovieCard from '../components/MovieCard';
 import {getNowPlayingMovies, getUpcomingMovies, getAllGenres} from "../services/MovieService"
 
-const Genres = ["Todo", "Acción", "Comedia", "Romance", "Horror", "Sci-Fi"];
-
-const homeScreen = ({navigation}) => {
+const HomeScreen = ({navigation}) => {
     const [currentGenre, setcurrentGenre] = useState("Todo");
     const [nowPlayingMovies, setNowPlayingMovies] = useState({});
     const [upcomingMovies, setUpcomingMovies] = useState({});
-    const [genres, setGenres] = useState([{id: 10110, name: "All"}]);
+    const [genres, setGenres] = useState([{id: 10110, name: "Todo"}]);
 
     useEffect(()=>{
       getNowPlayingMovies().then(movieResponse => setNowPlayingMovies(movieResponse.data));
@@ -122,4 +120,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default homeScreen;
+export default HomeScreen;

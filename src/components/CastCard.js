@@ -1,20 +1,20 @@
 import React from "react";
 import { View, StyleSheet, Text, Image } from "react-native";
 import { getPoster } from "../services/MovieService";
-import COLORS from "../constants/Colors";
-import FONTS from "../constants/Fonts";
-import IMAGES from "../constants/Images";
+import colors from "../constants/colors";
+import fonts from "../constants/fonts";
+import Images from "../constants/Images";
 
-const CastCard = ({ originalName, image, characterName }) => {
+const CastCard = ({ realName, image, characterName }) => {
   return (
     <View style={styles.container}>
       <Image
-        source={image ? { uri: getPoster(image) } : IMAGES.NO_IMAGE}
+        source={image ? { uri: getPoster(image) } : Images.NO_IMAGE}
         resizeMode={image ? "cover" : "contain"}
         style={styles.image}
       />
       <Text style={styles.originalName} numberOfLines={2}>
-        {originalName}
+        {realName}
       </Text>
       <Text style={styles.characterName} numberOfLines={2}>
         {characterName}
@@ -26,6 +26,7 @@ const CastCard = ({ originalName, image, characterName }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 10,
   },
   image: {
     height: 120,
@@ -34,15 +35,15 @@ const styles = StyleSheet.create({
   },
   originalName: {
     width: 80,
-    color: COLORS.BLACK,
-    fontFamily: FONTS.BOLD,
-    fontSize: 12,
+    color: colors.BLACK,
+    fontFamily: fonts.Akshar_Medium,
+    fontSize: 14,
   },
   characterName: {
     width: 80,
-    color: COLORS.LIGHT_GRAY,
-    fontFamily: FONTS.BOLD,
-    fontSize: 10,
+    color: colors.LIGHT_GRAY,
+    fontFamily: fonts.Akshar_Medium,
+    fontSize: 12,
   },
 });
 
