@@ -1,6 +1,7 @@
 import React from 'react'
 import { TouchableOpacity, StyleSheet, Text, View, Dimensions } from 'react-native';
 import colors from '../constants/colors';
+import fonts from '../constants/fonts';
 
 const {width} = Dimensions.get("screen")
 const setWidth = (w) => (width/100) * w
@@ -29,7 +30,12 @@ const styles = StyleSheet.create({
     },
     genreText: {
         fontSize: 18,
+<<<<<<< Updated upstream
         color: colors.ACTIVE,
+=======
+        colors: colors.ACTIVE,
+        fontFamily: fonts.bold,
+>>>>>>> Stashed changes
     }
   });
 
