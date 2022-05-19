@@ -1,6 +1,7 @@
 import React, {useState} from "react";
+import 'react-native-gesture-handler';
 import {View,Text,StyleSheet,Image,TouchableOpacity, TouchableNativeFeedback} from "react-native"
-import COLORS from "../constants/colors"
+import colors from "../constants/colors"
 import {Ionicons} from "@expo/vector-icons"
 import fonts from "../constants/fonts";
 import IMAGES from "../constants/Images"
@@ -18,7 +19,7 @@ const MovieCard = () =>{
         <Ionicons 
             name={liked ? "heart":"heart-outline"} 
             size={25} 
-            color={liked ? COLORS.HEART : COLORS.WHITE} 
+            color={liked ? colors.HEART : colors.HEART} 
             // style={[position"absolute", bottom:10,left: 10]}
             style={styles.heartbottom}
             />
@@ -32,7 +33,7 @@ const MovieCard = () =>{
             <Ionicons 
             name="heart" 
             size={17} 
-            color={COLORS.HEART} 
+            color={colors.HEART} 
             style={{marginRight:5}}
             />
             <Text style={styles.movieSubTitle}>90%</Text>
@@ -45,7 +46,7 @@ const MovieCard = () =>{
 
 const styles = StyleSheet.create({
     container:{
-        backgroundColor: COLORS.ACTIVE,
+        backgroundColor: colors.ACTIVE,
         height: 340,
         width: 230,
         borderRadius: 12,
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
     },
     movieTitle:{
         fontFamily: fonts.Koulen,
-        color: COLORS.GRAY,
+        color: colors.GRAY,
         paddingVertical:2,
         marginTop:5,
         width: 230,
@@ -76,7 +77,7 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
         alignSelf: "flex-end",
-        backgroundColor: COLORS.YELLOW,
+        backgroundColor: colors.YELLOW,
         borderBottomLeftRadius: 5,
         borderTopRightRadius:12,
         paddingVertical:3,
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
     },
     imdbRating: {
         marginRight:5,
-        color: COLORS.HEART,
+        color: colors.HEART,
         fontFamily: fonts.Koulen,
 
     },

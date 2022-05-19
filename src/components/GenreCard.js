@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     },
     genreText: {
         fontSize: 18,
-        colors: colors.ACTIVE,
+        color: colors.ACTIVE,
     }
   });
 

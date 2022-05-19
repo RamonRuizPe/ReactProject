@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import homeScreen from './src/screen/HomeScreen.js';
+import homeScreen from './src/screen/homeScreen';
 import movieScreen from './src/screen/movieScreen.js';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
