@@ -6,12 +6,12 @@ import fonts from "../constants/fonts";
 import IMAGES from "../constants/Images"
 import { getPoster,getLanguage } from "../services/MovieService";
 
-const MovieCard = ({title, poster, language,voteAverage, voteCount, size, heartLess}) =>{
+const MovieCard = ({title, poster, language,voteAverage, voteCount, size, heartLess, onPress}) =>{
     const[liked,setLiked] = useState(false)
     const [voteCountValue, setVoteCountValue] = useState(voteCount);
 
     return(
-    <TouchableOpacity activeOpacity={0.8}>
+    <TouchableOpacity activeOpacity={0.8} onPress ={onPress}>
     <ImageBackground 
         style={{...styles.container, width: 230*size, height: 340*size}} 
         imageStyle={{borderRadius: 12,}}
