@@ -6,13 +6,13 @@ const TMDB_API_KEY= "38fe090abaed0d37d4afe03d67224541"
 
 const ENDPOINTS ={
     NOW_PLAYING_MOVIES: "/movie/now_playing",
-    UPCOMING_MOVIES: "/movie/upcomig",
+    UPCOMING_MOVIES: "/movie/upcoming",
     GENRES: "/genre/movie/list",
     MOVIE: "/movie",
-};
+}
 
 const APPEND_TO_RESPONSE={
     VIDEOS: "videos",
 }
 
-export{TMDB_BASE_URL, TMDB_API_KEY, TMBD_IMAGE_BASE_URL, YOUTUBE_BASE_URL, ENDPOINTS, APPEND_TO_RESPONSE,}
+export{TMDB_BASE_URL, TMDB_API_KEY, TMBD_IMAGE_BASE_URL, YOUTUBE_BASE_URL, ENDPOINTS, APPEND_TO_RESPONSE}

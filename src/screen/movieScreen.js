@@ -1,13 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import { Dimensions, ScrollView, StyleSheet, Text, View, Image, TouchableOpacity, Linking, } from 'react-native';
+import { Dimensions, ScrollView, StyleSheet, Text, View, Image, TouchableOpacity, Linking, StatusBar } from 'react-native';
 import colors from '../constants/colors';
 import fonts from '../constants/fonts';
 import ItemSeparator from '../components/ItemSeparator';
 import {getMovieById, getPoster, getVideo} from "../services/MovieService"
 import {LinearGradient} from "expo-linear-gradient"
-import { Header } from 'react-native/Libraries/NewAppScreen'; 
 import {Feather, Ionicons} from "@expo/vector-icons"
-import { createPortal } from 'react-dom';
 import {APPEND_TO_RESPONSE as AR} from '../constants/Urls'
 
 const {height, width} = Dimensions.get('screen')

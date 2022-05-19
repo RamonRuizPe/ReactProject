@@ -32,4 +32,4 @@ import Languajes from "../constants/Languajes";
 
     const getAllGenres = () => TMDB_HTTP_REQUEST.get(ENDPOINTS.GENRES);
 
-    export{getNowPlayingMovies, getPoster, getLanguage, getUpcomingMovies, getAllGenres, getMovieById, getPoster, getVideo, getLanguage,};
+    export{getNowPlayingMovies, getPoster, getLanguage, getUpcomingMovies, getAllGenres, getMovieById, getVideo,};

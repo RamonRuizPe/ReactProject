@@ -63,7 +63,7 @@ const homeScreen = ({navigation}) => {
                                     voteCount={item.vote_count} 
                                     poster={item.poster_path}
                                     heartLess={false}
-                                    onPress={() => navigation.navitgate("movie", {movieId: item.id})}
+                                    onPress={() => navigation.navigate("movie", {movieId: item.id})}
                                 />}
         />
     </View>
@@ -87,7 +87,7 @@ const homeScreen = ({navigation}) => {
                                     voteCount={item.vote_count} 
                                     poster={item.poster_path}
                                     size={0.7}  
-                                    onPress={() => navigation.navitgate("movie", {movieId: item.id})} 
+                                    onPress={() => navigation.navigate("movie", {movieId: item.id})} 
                                 />}
         />
     </View>
