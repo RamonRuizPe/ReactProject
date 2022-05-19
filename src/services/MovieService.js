@@ -19,7 +19,7 @@ import Languajes from "../constants/Languajes";
     const getUpcomingMovies = () =>
         TMDB_HTTP_REQUEST.get(ENDPOINTS.UPCOMING_MOVIES);
 
-    const getPoster = (path) => `${TMDB_IMAGE_BASE_URL}/original${path}`;
+    const getPoster = (path) => `${TMBD_IMAGE_BASE_URL}/original${path}`;
 
     const getLanguage = (language_iso) =>
         Languajes.find((language)=>language.iso_639_1 === language_iso)

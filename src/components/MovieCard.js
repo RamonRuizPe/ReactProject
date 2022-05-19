@@ -1,12 +1,6 @@
 import React, {useState} from "react";
-<<<<<<< Updated upstream
-import 'react-native-gesture-handler';
-import {View,Text,StyleSheet,Image,TouchableOpacity, TouchableNativeFeedback} from "react-native"
-import colors from "../constants/colors"
-=======
 import {View,Text,StyleSheet,Image,TouchableOpacity, TouchableNativeFeedback, ImageBackground} from "react-native"
-import COLORS from "../constants/colors"
->>>>>>> Stashed changes
+import colors from "../constants/colors"
 import {Ionicons} from "@expo/vector-icons"
 import fonts from "../constants/fonts";
 import IMAGES from "../constants/Images"
@@ -27,18 +21,6 @@ const MovieCard = ({title, poster, language,voteAverage, voteCount, size, heartL
             <Image source={IMAGES.IMDB} style={{...styles.imdbImage,height:20*size, width: 50*size }}></Image>
             <Text style={{...styles.imdbRating,marginRight:5*size,fontSize:14*size}}>{voteAverage}</Text>
         </View>
-<<<<<<< Updated upstream
-        <TouchableNativeFeedback onPress={()=> setLiked(!liked)}>
-        <Ionicons 
-            name={liked ? "heart":"heart-outline"} 
-            size={25} 
-            color={liked ? colors.HEART : colors.HEART} 
-            style={{position:"absolute", bottom:10,left: 10}}
-            // style={styles.heartbottom}
-            />
-        </TouchableNativeFeedback>
-    </View>
-=======
         {!heartLess ?(
             <TouchableNativeFeedback  onPress={() => {
                 setLiked(!liked);
@@ -50,14 +32,12 @@ const MovieCard = ({title, poster, language,voteAverage, voteCount, size, heartL
             <Ionicons 
                 name={liked ? "heart":"heart-outline"} 
                 size={25*size} 
-                color={liked ? COLORS.HEART : COLORS.WHITE} 
-                // style={[position"absolute", bottom:10,left: 10]}
-                style={styles.heartbottom}
+                color={liked ? colors.HEART : colors.WHITE} 
+                style={{position:"absolute", bottom:10,left: 10}}
                 />
             </TouchableNativeFeedback>
         ):null}
     </ImageBackground>
->>>>>>> Stashed changes
     <View>
         <Text style={{...styles.movieTitle, width:230*size}} numberOfLines={2}>{title}</Text>
         <View style={styles.movieSubTitleContainer}>
@@ -65,13 +45,8 @@ const MovieCard = ({title, poster, language,voteAverage, voteCount, size, heartL
             <View style={styles.rowAndCenter}>
             <Ionicons 
             name="heart" 
-<<<<<<< Updated upstream
-            size={17} 
-            color={colors.HEART} 
-=======
             size={17*size} 
-            color={COLORS.HEART} 
->>>>>>> Stashed changes
+            color={colors.HEART} 
             style={{marginRight:5}}
             />
             <Text style={styles.movieSubTitle}>{voteCountValue}</Text>

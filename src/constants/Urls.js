@@ -1,7 +1,7 @@
 const TMDB_BASE_URL = "https://api.themoviedb.org/3"
 const TMBD_IMAGE_BASE_URL = "https://image.tmdb.org/t/p"
 
-const TMDB_API_KEY= "---"
+const TMDB_API_KEY= "38fe090abaed0d37d4afe03d67224541"
 
 const ENDPOINTS ={
     NOW_PLAYING_MOVIES: "/movie/now_playing",

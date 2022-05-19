@@ -30,12 +30,8 @@ const styles = StyleSheet.create({
     },
     genreText: {
         fontSize: 18,
-<<<<<<< Updated upstream
         color: colors.ACTIVE,
-=======
-        colors: colors.ACTIVE,
-        fontFamily: fonts.bold,
->>>>>>> Stashed changes
+        fontFamily: fonts.Koulen,
     }
   });
 
